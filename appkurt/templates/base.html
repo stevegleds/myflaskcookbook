@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% if title %}
+        <title>{{ title }} - blog.</title>
+    {% else %}
+        <title>Welcome to the blog.</title>
+    {%  endif %}
+</head>
+<body>
+<div>YouTubeBlog: <a href="/index">Home</a></div>
+<hr>
+<!-- content is name of block -->
+{%  block content %}
+{% endblock %}
+</body>
+</html>
