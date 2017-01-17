@@ -1,5 +1,5 @@
 from flask import Flask
-
+#  This is just a placeholder. No links to other files in this project as at 17 January 2017
 app = Flask(__name__)
 
 
