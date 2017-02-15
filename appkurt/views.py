@@ -1,5 +1,5 @@
 from flask import render_template
-from forms import LoginForm
+from forms import LoginForm  # from forms.py file
 from appkurt import app
 
 
@@ -23,6 +23,7 @@ def index():
 
 
 @app.route('/login', methods=['GET', 'POST'])
+
 def login():
     form = LoginForm()
     return render_template("login.html",
