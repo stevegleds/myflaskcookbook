@@ -1,0 +1,4 @@
+11 November 2017
+Created dropdown.py and test.html to test dropdown forms.
+Form displays correctly and can select.
+TODO: do something with the selected item
