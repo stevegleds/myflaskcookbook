@@ -1,13 +1,21 @@
-from flask import Flask, render_template
+from flask import Flask, flash, redirect, render_template, \
+     request, url_for
 
 app = Flask(__name__)
 app.debug = True #TODO remove this from live
 
-# This route is to get form input from html page
-@app.route('/', methods=['GET'])
-def dropdown():
-    colours = ['Red', 'Blue', 'Black', 'Orange']
-    return render_template('test.html', colours=colours)
+@app.route('/')
+def index():
+    return render_template(
+        'index.html',
+        data=[{'name':'red'}, {'name':'green'}, {'name':'blue'}])
 
-if __name__ == '__main__':
-    app.run()
+@app.route("/test" , methods=['GET', 'POST'])
+def test():
+    select = request.form.get('comp_select')
+    if select == 'red':
+        return render_template('red.html')
+    return(str(select)) # just to see what select is
+
+if __name__=='__main__':
+    app.run(debug=True)

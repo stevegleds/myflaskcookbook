@@ -1,4 +1,5 @@
 11 November 2017
-Created dropdown.py and test.html to test dropdown forms.
-Form displays correctly and can select.
-TODO: do something with the selected item
+Created dropdown.py to pass colour list to index.html
+index.html contains form that returns chosen colour to 'test' route
+test route then checks if user selected red and renders red.html which contains a warning message. This shows that we can do something with the content
+otherwise it simply returns page containing only the selected colour
