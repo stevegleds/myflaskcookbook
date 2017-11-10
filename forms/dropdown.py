@@ -5,6 +5,7 @@ app = Flask(__name__)
 app.debug = True #TODO remove this from live
 
 @app.route('/')
+@app.route('/index.html')
 def index():
     return render_template(
         'index.html',
@@ -15,7 +16,9 @@ def test():
     select = request.form.get('comp_select')
     if select == 'red':
         return render_template('red.html')
-    return(str(select)) # just to see what select is
+    select = "Congratulations! Your selection of [" + str(select) + "] has been accepted."
+    return(select) # just to see what select is
 
-if __name__=='__main__':
+
+if __name__ == '__main__':
     app.run(debug=True)
