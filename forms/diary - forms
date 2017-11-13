@@ -1,3 +1,5 @@
+13 November 2017
+Added code to take user input to build url. I've successfully used this in timetrial project to build url for views but this fails
 11 November 2017
 Created dropdown.py to pass colour list to index.html
 index.html contains form that returns chosen colour to 'test' route
